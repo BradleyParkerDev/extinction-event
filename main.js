@@ -18,6 +18,8 @@ unorderedListItem.addEventListener('click', function(event){
 })
 
 
+
+
 let rowImage = document.querySelectorAll('#row img');
 for(let i = 0; i < rowImage.length; i++){
     rowImage[i].addEventListener('click',function(){
@@ -28,10 +30,23 @@ for(let i = 0; i < rowImage.length; i++){
 }
 
 let meteor = document.querySelector('#destroy-all');
+let unorderedListItemMeteor = document.querySelectorAll('#unordered li');
+
 meteor.addEventListener('click',function(){
 
+    for(let i = 0; i<orderedListItem.length; i++){
+        orderedListItem[i].style.textDecoration = "line-through";
+    }
+
+    for(let i = 0; i<unorderedListItemMeteor.length; i++){
+        unorderedListItemMeteor[i].style.opacity = "0";
+    }
+  
     for(let i = 0; i < rowImage.length; i++){
         rowImage[i].style.width ='0px';
     }
-    console.log("Images disapeared!");
+
+    console.log('Ordered list items are crossed out!');
+    console.log('Unordered list items have an opacity of 0!');  
+    console.log("Images have disappeared!");
 })
