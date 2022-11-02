@@ -17,9 +17,8 @@ unorderedListItem.addEventListener('click', function(event){
 
 })
 
-let meteor = document.querySelector('#destroy-all');
 
-let rowImage = document.querySelectorAll('#row img')
+let rowImage = document.querySelectorAll('#row img');
 for(let i = 0; i < rowImage.length; i++){
     rowImage[i].addEventListener('click',function(){
         
@@ -27,6 +26,8 @@ for(let i = 0; i < rowImage.length; i++){
         console.log('Image disappeared!');
     })
 }
+
+let meteor = document.querySelector('#destroy-all');
 meteor.addEventListener('click',function(){
 
     for(let i = 0; i < rowImage.length; i++){
